@@ -1,0 +1,19 @@
+﻿@model Planet
+
+<form action="PlanetSearch" method="post">
+    <input type="number" min="1" name="Id" placeholder="Enter a number" required />
+    <input type="submit" />
+</form>
+
+@if (Model != null)
+{
+    <h2>Name: @Model.name</h2>
+    <h2>Rotation period: @Model.rotation_period hrs</h2>
+    <h2>Orbital period: @Model.orbital_period days</h2>
+    <h2>Diameter: @Model.diameter km</h2>
+    <h2>Climate: @Model.climate</h2>
+    <h2>Gravity: @Model.gravity</h2>
+    <h2>Terrain: @Model.terrain</h2>
+    <h2>Surface water: @Model.surface_water%</h2>
+    <h2>Population: @Model.population</h2>
+}

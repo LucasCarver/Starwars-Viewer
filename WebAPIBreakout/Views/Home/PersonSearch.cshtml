@@ -1,0 +1,18 @@
+﻿@model Person
+
+<form action="PersonSearch" method="post">
+    <input type="number" min="1" name="Id" placeholder="Enter a number" required />
+    <input type="submit" />
+</form>
+
+@if (Model != null)
+{
+    <h2>Name: @Model.name</h2>
+    <h2>Height: @(double.Parse(Model.height)/100) m</h2>
+    <h2>Mass: @Model.mass kg</h2>
+    <h2>Hair color: @Model.hair_color</h2>
+    <h2>Skin color: @Model.skin_color</h2>
+    <h2>Eye color: @Model.eye_color</h2>
+    <h2>Birth year: @Model.birth_year</h2>
+    <h2>Gender: @Model.gender</h2>
+}
